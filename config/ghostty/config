@@ -1,0 +1,11 @@
+macos-icon = retro
+font-family = MonaspiceNe NFM
+theme = ayu
+background-opacity = 0.9
+background-blur-radius = 60
+macos-titlebar-proxy-icon = hidden
+font-size = 16
+window-width = 110
+window-height = 40
+keybind = global:ctrl+i=toggle_quick_terminal
+quick-terminal-position = bottom
