@@ -1,20 +1,20 @@
-.PHONY: install clean help
+.PHONY: install stow help
 
 # Default target
 help:
 	@echo "Available targets:"
 	@echo "  install  - Run the install script"
-	@echo "  clean    - Clean up temporary files"
+	@echo "  stow     - Install configuration files with GNU Stow"
 	@echo "  help     - Show this help message"
 
-# Main install target that runs setup.sh
+# Main install target that runs install script via run.sh
 install:
 	@echo "Running install script..."
-	@chmod +x install.sh
-	@./install.sh
+	@chmod +x run.sh
+	@./run.sh install
 
-# Clean target for cleanup
-clean:
-	@echo "Cleaning up temporary files..."
-	@find . -name "*.tmp" -delete
-	@find . -name ".DS_Store" -delete
+# Stow target for configuration files via run.sh
+stow:
+	@echo "Installing configuration files with GNU Stow..."
+	@chmod +x run.sh
+	@./run.sh stow

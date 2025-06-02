@@ -6,6 +6,10 @@ echo "Setting up macOS..."
 echo "Installing XCode command line tools..."
 xcode-select --install
 
+# Install Battery
+echo "Installing Battery..."
+curl -s https://raw.githubusercontent.com/actuallymentor/battery/main/setup.sh | bash
+
 # Install Homebrew
 echo "Installing Homebrew..."
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"

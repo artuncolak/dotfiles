@@ -11,7 +11,9 @@ echo "Installing packages..."
 sudo apt install -y \
     yq stow \
     git \
-    zsh
+    zsh \
+    bat \
+    eza
 
 sudo chsh -s $(which zsh)
 

@@ -4,8 +4,8 @@
 
 # Get the directory where this script is located
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-# Go up one level to project root and find targets.yaml
-CONFIG_TARGETS_FILE="$SCRIPT_DIR/../targets.yaml"
+# Set the path to targets.yaml relative to the script's parent directory (dotfiles root)
+CONFIG_TARGETS_FILE="$(dirname "$SCRIPT_DIR")/targets.yaml"
 
 # Function to get target path from YAML config
 get_target_path() {

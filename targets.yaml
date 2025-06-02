@@ -8,6 +8,9 @@ targets:
   lazygit:
     Darwin: "~/library/Application Support/lazygit"
     Linux: "~/.config/jesseduffield/lazygit"
+  vscode:
+    Darwin: "~/Library/Application Support/Cursor/User"
+    Linux: "~/.config/Cursor/User"
 
 # Default target directory if target is not found
 default_target: "~"

@@ -1,11 +1,21 @@
-macos-icon = retro
+# Font Settings
 font-family = MonaspiceNe NFM
-theme = ayu
+font-size = 16
+
+# Theme and Appearance
+theme = catppuccin-mocha
 background-opacity = 0.9
 background-blur-radius = 60
-macos-titlebar-proxy-icon = hidden
-font-size = 16
+
+# Window Settings
+initial-window = false
 window-width = 110
 window-height = 40
-keybind = global:ctrl+i=toggle_quick_terminal
-quick-terminal-position = bottom
+
+# macOS Specific
+macos-titlebar-proxy-icon = hidden
+
+# Quick Terminal
+keybind = global:ctrl+cmd+t=toggle_quick_terminal
+quick-terminal-position = top
+quick-terminal-space-behavior = remain
