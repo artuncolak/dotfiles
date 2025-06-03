@@ -1,9 +1,9 @@
 # Font Settings
-font-family = MonaspiceNe NFM
+font-family = MonaspiceAr NFM
 font-size = 16
 
 # Theme and Appearance
-theme = catppuccin-mocha
+theme = Argonaut
 background-opacity = 0.9
 background-blur-radius = 60
 
