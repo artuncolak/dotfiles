@@ -1,1 +1,4 @@
 .DS_Store
+.zcompdump*
+.zsh_history
+git-author.zsh

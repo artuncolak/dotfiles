@@ -1,11 +1,9 @@
 # Font Settings
-font-family = MonaspiceAr NFM
-font-size = 16
+font-family = Monaspace Neon
+font-size = 14
 
 # Theme and Appearance
 theme = Argonaut
-background-opacity = 0.9
-background-blur-radius = 60
 
 # Window Settings
 initial-window = false
@@ -17,5 +15,5 @@ macos-titlebar-proxy-icon = hidden
 
 # Quick Terminal
 keybind = global:ctrl+cmd+t=toggle_quick_terminal
-quick-terminal-position = top
+quick-terminal-position = bottom
 quick-terminal-space-behavior = remain

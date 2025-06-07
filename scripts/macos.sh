@@ -1,21 +1,114 @@
 #!/bin/bash
 
-echo "Setting up macOS..."
+# Close any open System Preferences panes, to prevent them from overriding
+# settings we're about to change
+osascript -e 'tell application "System Preferences" to quit'
 
-# Install XCode
-echo "Installing XCode command line tools..."
-xcode-select --install
+# Ask for the administrator password upfront
+sudo -v
 
-# Install Battery
-echo "Installing Battery..."
-curl -s https://raw.githubusercontent.com/actuallymentor/battery/main/setup.sh | bash
+# Keep-alive: update existing `sudo` time stamp until `.macos` has finished
+while true; do
+    sudo -n true
+    sleep 60
+    kill -0 "$$" || exit
+done 2>/dev/null &
 
-# Install Homebrew
-echo "Installing Homebrew..."
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+###############################################################################
+# General UI/UX                                                               #
+###############################################################################
 
-# Install Brew Packages
-echo "Installing brew packages..."
-brew bundle install
+# Disable the sound effects on boot
+sudo nvram SystemAudioVolume=" "
 
-echo "macOS setup completed!"
+# Disable the "Are you sure you want to open this application?" dialog
+defaults write com.apple.LaunchServices LSQuarantine -bool false
+
+# Reveal IP address, hostname, OS version, etc. when clicking the clock
+# in the login window
+sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
+
+# Disable automatic capitalization as it's annoying when typing code
+defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
+
+# Disable smart dashes as they're annoying when typing code
+defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+
+# Disable smart quotes as they're annoying when typing code
+defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+
+# Disable auto-correct
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+
+###############################################################################
+# Finder                                                                      #
+###############################################################################
+
+# Finder: show status bar
+defaults write com.apple.finder ShowStatusBar -bool true
+
+# Finder: show path bar
+defaults write com.apple.finder ShowPathbar -bool true
+
+# Keep folders on top when sorting by name
+defaults write com.apple.finder _FXSortFoldersFirst -bool true
+
+# When performing a search, search the current folder by default
+defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
+
+# Finder: show all filename extensions
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+# Avoid creating .DS_Store files on network or USB volumes
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+
+# Enable snap-to-grid for icons on the desktop and in other icon views
+/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
+
+# Use list view in all Finder windows by default
+# Four-letter codes for the other view modes: `icnv`, `clmv`, `glyv`
+defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
+
+# Enable AirDrop over Ethernet and on unsupported Macs running Lion
+defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
+
+
+###############################################################################
+# Dock                                                                      #
+###############################################################################
+
+# Set the icon size of Dock items to 36 pixels
+defaults write com.apple.dock tilesize -int 36
+
+# Don’t show recent applications in Dock
+defaults write com.apple.dock show-recents -bool false
+
+###############################################################################
+# Raycast                                                                     #
+###############################################################################
+
+# Disable Spotlight shortcut (Cmd+Space) to free it up for Raycast
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 64 "<dict><key>enabled</key><false/></dict>"
+
+# Disable Spotlight window shortcut (Cmd+Opt+Space) as well
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 65 "<dict><key>enabled</key><false/></dict>"
+
+# Set Raycast hotkey to Cmd+Space (Command-49)
+defaults write com.raycast.macos raycastGlobalHotkey -string "Command-49"
+
+# Hide status bar icon for cleaner menubar
+defaults write com.raycast.macos "NSStatusItem Visible raycastIcon" -bool false
+
+# Hide getting started link
+defaults write com.raycast.macos showGettingStartedLink -bool false
+
+# Ensure Raycast follows system appearance (light/dark mode)
+defaults write com.raycast.macos raycastShouldFollowSystemAppearance -bool true
+
+# Mark onboarding as completed
+defaults write com.raycast.macos onboardingCompleted -bool true
+
+echo "Done. Note that some of these changes require a logout/restart to take effect."
