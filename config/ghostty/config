@@ -1,0 +1,19 @@
+# Font Settings
+font-family = Monaspace Neon
+font-size = 14
+
+# Theme and Appearance
+theme = Argonaut
+
+# Window Settings
+initial-window = false
+window-width = 110
+window-height = 40
+
+# macOS Specific
+macos-titlebar-proxy-icon = hidden
+
+# Quick Terminal
+keybind = global:ctrl+cmd+t=toggle_quick_terminal
+quick-terminal-position = bottom
+quick-terminal-space-behavior = remain
