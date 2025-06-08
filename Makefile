@@ -10,17 +10,17 @@ help:
 
 setup:
 	@echo "Setting up environment..."
+	@sudo -v
 	$(MAKE) install
+	$(MAKE) zsh
 	$(MAKE) link
 	$(MAKE) macos
 
-# Main install target that runs install script via run.sh
 install:
 	@echo "Running install script..."
 	@chmod +x scripts/install.sh
 	@./scripts/install.sh
 
-# Stow target for configuration files via run.sh
 link:
 	@echo "Installing configuration files with dotbot..."
 	@chmod +x scripts/link.sh
@@ -30,3 +30,8 @@ macos:
 	@echo "Running macOS script..."
 	@chmod +x scripts/macos.sh
 	@./scripts/macos.sh
+
+zsh:
+	@echo "Running zsh script..."
+	@chmod +x scripts/zsh.sh
+	@sudo ./scripts/zsh.sh
