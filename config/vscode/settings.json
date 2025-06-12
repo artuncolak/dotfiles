@@ -17,5 +17,11 @@
   },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "chat.editor.fontSize": 14,
+  "git.blame.editorDecoration.enabled": true,
+  "git.blame.statusBarItem.enabled": true
 }
