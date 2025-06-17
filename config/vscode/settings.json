@@ -23,5 +23,9 @@
   },
   "chat.editor.fontSize": 14,
   "git.blame.editorDecoration.enabled": true,
-  "git.blame.statusBarItem.enabled": true
+  "git.blame.statusBarItem.enabled": true,
+  "git.blame.editorDecoration.template": "${authorName} (${authorDateAgo}), ${subject}",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
