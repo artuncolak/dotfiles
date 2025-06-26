@@ -10,7 +10,7 @@
 
 [merge]
     conflictstyle = zdiff3
-	ff = false
+	ff = true
 
 [init]
 	defaultBranch = main
