@@ -53,3 +53,6 @@ clean_node_modules() {
 }
 
 alias nuke-nm='clean_node_modules'
+
+# Project aliases
+alias p='cd ~/projects'
