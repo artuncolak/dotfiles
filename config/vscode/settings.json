@@ -10,7 +10,6 @@
   "workbench.colorTheme": "Bearded Theme Arc Blueberry",
   "workbench.iconTheme": "bearded-icons",
   "prettier.printWidth": 100,
-  "workbench.tree.indent": 20,
   "terminal.integrated.fontSize": 14,
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -26,6 +25,11 @@
   "git.blame.statusBarItem.enabled": true,
   "git.blame.editorDecoration.template": "${authorName} (${authorDateAgo}), ${subject}",
   "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "symbols.hidesExplorerArrows": false,
+  "workbench.tree.indent": 12,
+  "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
