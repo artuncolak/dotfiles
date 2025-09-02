@@ -17,3 +17,4 @@ macos-titlebar-proxy-icon = hidden
 keybind = global:ctrl+cmd+t=toggle_quick_terminal
 quick-terminal-position = bottom
 quick-terminal-space-behavior = remain
+quick-terminal-autohide = false
