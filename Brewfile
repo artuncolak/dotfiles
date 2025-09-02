@@ -32,6 +32,7 @@ brew "lazygit"
 brew "mas"
 brew "neovim"
 brew "tmux"
+brew "pandoc"
 
 # App Store
 mas "Amphetamine", id: 937984704
