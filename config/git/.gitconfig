@@ -10,9 +10,13 @@
 
 [merge]
     conflictstyle = zdiff3
-	ff = false
+	ff = true
 
 [init]
 	defaultBranch = main
+    
 [push]
 	autoSetupRemote = true
+
+[pull]
+	rebase = true
