@@ -8,11 +8,7 @@ osascript -e 'tell application "System Preferences" to quit'
 sudo -v
 
 # Keep-alive: update existing `sudo` time stamp until `.macos` has finished
-while true; do
-    sudo -n true
-    sleep 60
-    kill -0 "$$" || exit
-done 2>/dev/null &
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 ###############################################################################
 # General UI/UX                                                               #
@@ -70,7 +66,7 @@ defaults write com.apple.finder ShowStatusBar -bool true
 defaults write com.apple.finder ShowPathbar -bool true
 
 # Keep folders on top when sorting by name
-defaults write com.apple.finder _FXSortFoldersFirst -bool true
+defaults write com.apple.finder _FXSortFoldersFirst -bool "true"
 
 # When performing a search, search the current folder by default
 defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
@@ -91,6 +87,14 @@ defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 /usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
 /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
 
+# Finder: use larger icons in list view
+/usr/libexec/PlistBuddy -c "Set :ComputerViewSettings:ListViewSettings:iconSize 32" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :ComputerViewSettings:ExtendedListViewSettingsV2:iconSize 32" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:ListViewSettings:iconSize 32" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:ExtendedListViewSettingsV2:iconSize 32" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:ListViewSettings:iconSize 32" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:ExtendedListViewSettingsV2:iconSize 32" ~/Library/Preferences/com.apple.finder.plist
+
 # Enable AirDrop over Ethernet and on unsupported Macs running Lion
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 
@@ -98,8 +102,8 @@ defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 # Dock                                                                      #
 ###############################################################################
 
-# Set the icon size of Dock items to 42 pixels
-defaults write com.apple.dock tilesize -int 42
+# Set the icon size of Dock items to 45 pixels
+defaults write com.apple.dock tilesize -int 45
 
 # Don’t show recent applications in Dock
 defaults write com.apple.dock show-recents -bool false
@@ -129,7 +133,12 @@ defaults write com.raycast.macos raycastShouldFollowSystemAppearance -bool true
 # Mark onboarding as completed
 defaults write com.raycast.macos onboardingCompleted -bool true
 
-echo "Done. Note that some of these changes require a logout/restart to take effect."
+###############################################################################
+# Calendar                                                                    #
+###############################################################################
+
+# Ensure Calendar shows time zone support controls
+defaults write com.apple.iCal "TimeZone support enabled" -bool true
 
 ###############################################################################
 # Rectangle                                                                   #
@@ -141,3 +150,10 @@ defaults write com.knollsoft.Rectangle selectedCycleSizes -int 31
 defaults write com.knollsoft.Rectangle hideMenuBarIcon -int 1
 defaults write com.knollsoft.Rectangle centerHalfCycles -int 1
 defaults write com.knollsoft.Rectangle launchOnLogin -int 1
+
+# Restart UI, Finder, and Dock
+killall SystemUIServer
+killall Finder
+killall Dock
+
+echo "Done. Note that some of these changes require a logout/restart to take effect."

@@ -1,0 +1,109 @@
+- name: Home
+  hide-desktop-navigation: false
+  center-vertically: true
+
+  columns:
+    - $include: left-column.yml
+
+    - size: full
+      widgets:
+        - $include: search.yml
+
+        - type: bookmarks
+          groups:
+            - title: Developer
+              links:
+                - title: Github
+                  url: https://github.com/
+                  icon: di:github-light
+                  same-tab: true
+
+                - title: IT Tools
+                  url: https://it-tools.tech/
+                  icon: di:it-tools-light
+                  same-tab: true
+
+                - title: JSON Escape Unescape
+                  url: https://www.freeformatter.com/json-escape.html
+                  icon: https://www.google.com/s2/favicons?domain=https://www.freeformatter.com/json-escape.html&sz=256
+                  same-tab: true
+
+            - title: Cloud
+              links:
+                - title: Hetzner
+                  url: https://console.hetzner.com/
+                  icon: di:hetzner-h
+                  same-tab: true
+
+                - title: Vercel
+                  url: https://vercel.com/
+                  icon: di:vercel-light
+                  same-tab: true
+
+                - title: Cloudflare
+                  url: https://dash.cloudflare.com
+                  icon: di:cloudflare
+                  same-tab: true
+
+            - title: Apple
+              links:
+                - title: App Store Connect
+                  url: https://appstoreconnect.apple.com/
+                  icon: di:apple-light
+                  same-tab: true
+
+                - title: Apple Developer
+                  url: https://developer.apple.com/
+                  icon: di:apple-light
+                  same-tab: true
+
+            - title: Google
+              links:
+                - title: Gmail
+                  url: https://mail.google.com/
+                  icon: di:gmail
+                  same-tab: true
+
+                - title: YouTube
+                  url: https://www.youtube.com/
+                  icon: di:youtube
+                  same-tab: true
+
+                - title: Google Photos
+                  url: https://photos.google.com/
+                  icon: di:google-photos
+                  same-tab: true
+
+                - title: Sheets
+                  url: https://sheets.google.com/
+                  icon: di:google-sheets
+                  same-tab: true
+
+                - title: Docs
+                  url: https://docs.google.com/
+                  icon: di:google-docs
+                  same-tab: true
+
+                - title: Slides
+                  url: https://slides.google.com
+                  icon: di:google-slides
+                  same-tab: true
+
+            - title: Social
+              links:
+                - title: Reddit
+                  url: https://www.reddit.com/
+                  icon: di:reddit
+                  same-tab: true
+
+                - title: X
+                  url: https://x.com/
+                  icon: di:x-light
+                  same-tab: true
+
+                - title: Instagram
+                  url: https://www.instagram.com/
+                  icon: di:instagram
+                  same-tab: true
+
+        - $include: newsletter.yml

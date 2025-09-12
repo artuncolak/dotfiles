@@ -16,8 +16,10 @@
     ${XDG_CONFIG_HOME}/lazygit: config/lazygit
     ${XDG_CONFIG_HOME}/starship: config/starship
     ${XDG_CONFIG_HOME}/ghostty: config/ghostty
-    ~/Library/Application Support/Cursor/User/settings.json: config/vscode/settings.json
-    ~/Library/Application Support/Cursor/User/keybindings.json: config/vscode/keybindings.json
+    ${XDG_CONFIG_HOME}/zed: config/zed
+    ${XDG_CONFIG_HOME}/glance: config/glance
+    ~/Library/Application Support/Cursor/User/settings.json: config/cursor/settings.json
+    ~/Library/Application Support/Cursor/User/keybindings.json: config/cursor/keybindings.json
     ~/.cursor/mcp.json: config/cursor/mcp.json
     ~/.gitconfig: config/git/.gitconfig
 

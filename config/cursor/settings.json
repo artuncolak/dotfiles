@@ -1,0 +1,43 @@
+{
+  "$schema": "vscode://schemas/settings/user",
+  "workbench.productIconTheme": "fluent-icons",
+  "window.commandCenter": true,
+  "window.restoreWindows": "none",
+  "files.autoSave": "afterDelay",
+  "editor.fontSize": 14,
+  "editor.fontFamily": "'Monaspace Argon', monospace",
+  "editor.fontWeight": "500",
+  "editor.inlineSuggest.fontFamily": "'Monaspace Krypton', monospace",
+  "editor.fontLigatures": "'calt', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09', 'ss10', 'liga'",
+  "terminal.integrated.fontFamily": "'Monaspace Neon', monospace",
+  "terminal.integrated.fontSize": 14,
+  "workbench.activityBar.orientation": "vertical",
+  "workbench.iconTheme": "bearded-icons",
+  "workbench.colorTheme": "Bearded Theme Anthracite",
+  "prettier.printWidth": 100,
+  "git.blame.editorDecoration.enabled": true,
+  "git.blame.statusBarItem.enabled": true,
+  "git.blame.editorDecoration.template": "${authorName} (${authorDateAgo}), ${subject}",
+  "editor.cursorBlinking": "expand",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.tree.indent": 12,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "biome.suggestInstallingGlobally": false,
+  "json.schemaDownload.enable": true
+}

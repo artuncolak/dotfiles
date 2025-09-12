@@ -1,0 +1,15 @@
+- type: search
+  search-engine: google
+  autofocus: true
+  bangs:
+    - title: YouTube
+      shortcut: "!yt"
+      url: https://www.youtube.com/results?search_query={QUERY}
+
+    - title: ChatGPT
+      shortcut: "!gpt"
+      url: https://chatgpt.com/?q={QUERY}
+
+    - title: Perplexity
+      shortcut: "!p"
+      url: https://www.perplexity.ai/search?q={QUERY}

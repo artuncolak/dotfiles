@@ -1,0 +1,21 @@
+- size: small
+  widgets:
+    - type: custom-api
+      title: Public IP Address
+      cache: 15m
+      url: https://api.ipify.org?format=json
+      template: |
+        <p class="size-h4 color-paragraph">{{ .JSON.String "ip" }}</p>
+
+    - type: clock
+      hour-format: 24h
+      timezones:
+        - timezone: Europe/Istanbul
+          label: Istanbul
+        - timezone: Europe/London
+          label: London
+
+    - type: weather
+      units: metric
+      hour-format: 12h
+      location: Edirne, Türkiye
