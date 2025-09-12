@@ -40,6 +40,7 @@ mas "Developer", id: 640199958
 
 # Fonts
 cask "font-monaspace"
+cask "font-nunito"
 
 # VSCode Extensions
 vscode "aaron-bond.better-comments"

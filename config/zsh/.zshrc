@@ -28,3 +28,5 @@ source $ZDOTDIR/git.zsh
 eval "$(fnm env --use-on-cd --shell zsh)"
 
 bindkey '^o' fzf-cd-widget
+
+source $HOME/.local/bin/env
