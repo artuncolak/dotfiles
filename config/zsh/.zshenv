@@ -15,3 +15,6 @@ export OH_MY_ZSH_DIR="$XDG_CONFIG_HOME/omz"
 
 # Set default applications
 export EDITOR="cursor"
+
+# Homebrew
+export HOMEBREW_CASK_OPTS="--appdir=~/Applications --fontdir=/Library/Fonts"

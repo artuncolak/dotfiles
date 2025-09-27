@@ -1,4 +1,4 @@
-.PHONY: install stow help
+.PHONY: install setup link macos zsh help
 
 # Default target
 help:
@@ -6,6 +6,8 @@ help:
 	@echo "  setup    - Setup the environment"
 	@echo "  install  - Install packages"
 	@echo "  link     - Install configuration files with dotbot"
+	@echo "  macos    - Run macOS script"
+	@echo "  zsh      - Run zsh script"
 	@echo "  help     - Show this help message"
 
 setup:

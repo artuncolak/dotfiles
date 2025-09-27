@@ -1,0 +1,70 @@
+- name: Work
+  hide-desktop-navigation: false
+  center-vertically: true
+
+  columns:
+    - $include: left-column.yml
+
+    - size: full
+      widgets:
+        - $include: search.yml
+
+        - type: bookmarks
+          groups:
+            - title: GitHub
+              links:
+                - title: GitHub
+                  url: https://github.com/orgs/ikascom/repositories
+                  icon: di:github-light
+                  same-tab: true
+
+                - title: My Tasks
+                  url: https://github.com/orgs/ikascom/projects/26/views/1
+                  icon: di:github-light
+                  same-tab: true
+
+                - title: Bug Pool
+                  url: https://github.com/orgs/ikascom/projects/20/views/10
+                  icon: di:github-light
+                  same-tab: true
+
+            - title: Developer
+              links:
+                - title: IT Tools
+                  url: https://it-tools.tech/
+                  icon: di:it-tools-light
+                  same-tab: true
+
+                - title: JSON Escape Unescape
+                  url: https://www.freeformatter.com/json-escape.html
+                  icon: https://www.google.com/s2/favicons?domain=https://www.freeformatter.com/json-escape.html&sz=256
+                  same-tab: true
+
+                - title: Jenkins
+                  url: http://v2jenkins.myikasdev.com:8080/
+                  icon: di:jenkins
+                  same-tab: true
+
+                - title: Datadog
+                  url: https://app.datadoghq.eu/logs?query=&cols=host%2Cservice&fromUser=true&messageDisplay=inline&refresh_mode=sliding&storage=hot&stream_sort=desc&viz=stream&from_ts=1749511098979&to_ts=1749511998979&live=true
+                  icon: di:datadog
+                  same-tab: true
+
+                - title: AWS
+                  url: https://eu-central-1.console.aws.amazon.com/console/home?region=eu-central-1
+                  icon: di:aws-light
+                  same-tab: true
+
+                - title: Vercel
+                  url: https://vercel.com/ikascom
+                  icon: di:vercel-light
+                  same-tab: true
+
+            - title: Work Tools
+              links:
+                - title: Kolay İK
+                  url: https://app.kolayik.com/home
+                  icon: https://www.google.com/s2/favicons?domain=https://app.kolayik.com/&sz=256
+                  same-tab: true
+
+        - $include: newsletter.yml
