@@ -10,7 +10,7 @@ else
 fi
 
 # Update brew and install packages
-export HOMEBREW_CASK_OPTS="--appdir=~/Applications --fontdir=/Library/Fonts"
+export HOMEBREW_CASK_OPTS="--fontdir=/Library/Fonts"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 brew update
 brew bundle install

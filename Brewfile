@@ -51,6 +51,7 @@ mas "Xcode", id: 497799835
 # Fonts
 cask "font-monaspace"
 cask "font-nunito"
+cask "font-maple-mono-nf"
 
 # VSCode Extensions
 vscode "aaron-bond.better-comments"

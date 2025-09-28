@@ -8,7 +8,7 @@
   "editor.fontFamily": "'Monaspace Argon', monospace",
   "editor.inlineSuggest.fontFamily": "'Monaspace Krypton', monospace",
   "editor.fontLigatures": "'calt', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09', 'ss10', 'liga'",
-  "terminal.integrated.fontFamily": "'Monaspace Argon', monospace",
+  "terminal.integrated.fontFamily": "'Maple Mono NF', monospace",
   "terminal.integrated.fontSize": 14,
   "workbench.activityBar.orientation": "vertical",
   "workbench.iconTheme": "bearded-icons",

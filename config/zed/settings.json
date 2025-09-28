@@ -1,4 +1,8 @@
 {
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
   "agent": {
     "single_file_review": true
   },
@@ -8,7 +12,7 @@
   "buffer_font_size": 15,
   "buffer_font_family": "Monaspace Neon",
   "terminal": {
-    "font_family": "Monaspace Neon"
+    "font_family": "Maple Mono NF"
   },
   "autosave": "on_focus_change",
   "theme": {
