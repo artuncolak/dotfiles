@@ -106,4 +106,9 @@
                   icon: di:instagram
                   same-tab: true
 
+                - title: Linkedin
+                  url: https://www.linkedin.com/
+                  icon: di:linkedin
+                  same-tab: true
+
         - $include: newsletter.yml
