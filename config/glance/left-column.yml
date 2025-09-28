@@ -2,7 +2,7 @@
   widgets:
     - type: custom-api
       title: Public IP Address
-      cache: 15m
+      cache: 1m
       url: https://api.ipify.org?format=json
       template: |
         <p class="size-h4 color-paragraph">{{ .JSON.String "ip" }}</p>
