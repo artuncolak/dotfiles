@@ -15,7 +15,4 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 brew update
 brew bundle install
 
-# Run docker compose
-docker compose up -d
-
 echo "Install Completed!"

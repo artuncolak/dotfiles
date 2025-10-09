@@ -28,3 +28,8 @@ source $ZDOTDIR/git.zsh
 eval "$(fnm env --use-on-cd --shell zsh)"
 
 bindkey '^o' fzf-cd-widget
+
+# Source local zshrc if present
+if [ -f "$ZDOTDIR/local.zsh" ]; then
+    source "$ZDOTDIR/local.zsh"
+fi

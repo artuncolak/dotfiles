@@ -14,11 +14,11 @@ cask "microsoft-word"
 cask "monitorcontrol"
 cask "notion"
 cask "obsidian"
-cask "orbstack"
 cask "postman"
 cask "raycast"
 cask "rectangle"
 cask "stats"
+cask "temurin"
 cask "whatsapp"
 cask "zed"
 
@@ -26,7 +26,11 @@ cask "zed"
 brew "awscli"
 brew "bat"
 brew "codex"
+brew "colima"
 brew "dotbot"
+brew "docker"
+brew "docker-buildx"
+brew "docker-compose"
 brew "eza"
 brew "fnm"
 brew "fzf"
@@ -36,10 +40,10 @@ brew "go"
 brew "lazydocker"
 brew "lazygit"
 brew "mas"
-brew "mas"
 brew "neovim"
 brew "pandoc"
 brew "tmux"
+brew "watchman"
 
 # App Store
 mas "Amphetamine", id: 937984704
@@ -49,9 +53,9 @@ mas "WireGuard", id: 1451685025
 mas "Xcode", id: 497799835
 
 # Fonts
+cask "font-maple-mono-nf"
 cask "font-monaspace"
 cask "font-nunito"
-cask "font-maple-mono-nf"
 
 # VSCode Extensions
 vscode "aaron-bond.better-comments"

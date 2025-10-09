@@ -14,6 +14,6 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 dotbot -d "${BASEDIR}" -c "${CONFIG}" "${@}"
 
 cd "$HOME"
-rm -rf .zshrc .zsh_sessions .zsh_history .*.pre-oh-my-zsh .zcompdump*
+rm -rf .zshrc .zsh_sessions .zsh_history .*.pre-oh-my-zsh .zcompdump* .colima
 
 cd "${BASEDIR}"

@@ -1,12 +1,15 @@
 export DOTFILES_DIR="$HOME/.dotfiles"
 
 # Aliases
+
+# Project aliases
+alias p='cd ~/projects'
+
 # Development tools
-alias lg=lazygit
+alias lg='lazygit'
+alias lzd='lazydocker'
 alias vi='nvim'
 alias vim='nvim'
-alias dotfiles='git -C $DOTFILES_DIR'
-alias dotfiles-go='cd $DOTFILES_DIR'
 
 # Enhanced ls commands with eza
 alias ls='eza --icons=always'
@@ -17,6 +20,16 @@ alias ldot='eza --icons=always -ld .*'
 # Better cat with syntax highlighting
 alias cat='bat --color=always --style=plain'
 
+# Dotfiles
+dotfiles() {
+    if [[ $# -eq 0 ]]; then
+        cd $DOTFILES_DIR
+    else
+        make -C $DOTFILES_DIR "$@"
+    fi
+}
+
+# Clean node_modules
 clean_node_modules() {
     local path="$1"
 
@@ -51,8 +64,4 @@ clean_node_modules() {
         echo "Operation cancelled."
     fi
 }
-
 alias nuke-nm='clean_node_modules'
-
-# Project aliases
-alias p='cd ~/projects'

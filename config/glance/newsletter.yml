@@ -1,24 +1,4 @@
-- type: group
-  widgets:
-    - type: lobsters
-      sort-by: hot
-      limit: 50
-      collapse-after: 10
-
-    - type: reddit
-      subreddit: ExperiencedDevs
-      limit: 50
-      collapse-after: 10
-      show-thumbnails: true
-
-    - type: reddit
-      subreddit: programming
-      limit: 50
-      collapse-after: 10
-      show-thumbnails: true
-
-    - type: reddit
-      subreddit: technology
-      limit: 50
-      collapse-after: 10
-      show-thumbnails: true
+- type: lobsters
+  sort-by: hot
+  limit: 50
+  collapse-after: 10
