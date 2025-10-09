@@ -38,5 +38,6 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "biome.suggestInstallingGlobally": false,
-  "json.schemaDownload.enable": true
+  "json.schemaDownload.enable": true,
+  "claude-code.selectedModel": "default",
 }
