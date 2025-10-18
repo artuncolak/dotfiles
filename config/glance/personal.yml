@@ -111,4 +111,16 @@
                   icon: di:linkedin
                   same-tab: true
 
+            - title: Practice
+              links:
+                - title: Leetcode
+                  url: https://leetcode.com/
+                  icon: di:leetcode
+                  same-tab: true
+
+                - title: Algomaster
+                  url: https://algomaster.io/
+                  icon: https://www.google.com/s2/favicons?domain=https://algomaster.io/&sz=256
+                  same-tab: true
+
         - $include: newsletter.yml

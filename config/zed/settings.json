@@ -1,16 +1,18 @@
 {
+  "show_edit_predictions": true,
   "telemetry": {
     "diagnostics": false,
     "metrics": false
   },
   "agent": {
+    "always_allow_tool_actions": true,
     "single_file_review": true
   },
   "icon_theme": "Bearded Icon Theme",
   "base_keymap": "Cursor",
-  "ui_font_size": 16,
-  "buffer_font_size": 15,
-  "buffer_font_family": "Monaspace Neon",
+  "ui_font_size": 18.0,
+  "buffer_font_size": 16.0,
+  "buffer_font_family": "Monaspace Argon",
   "terminal": {
     "font_family": "Maple Mono NF"
   },
@@ -18,6 +20,6 @@
   "theme": {
     "mode": "system",
     "light": "Ayu Light",
-    "dark": "Ayu Dark"
+    "dark": "Catppuccin Mocha"
   }
 }

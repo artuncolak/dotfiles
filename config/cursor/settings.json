@@ -12,7 +12,7 @@
   "terminal.integrated.fontSize": 14,
   "workbench.activityBar.orientation": "vertical",
   "workbench.iconTheme": "bearded-icons",
-  "workbench.colorTheme": "Bearded Theme Arc",
+  "workbench.colorTheme": "Bearded Theme Coffee Reversed",
   "prettier.printWidth": 100,
   "git.blame.editorDecoration.enabled": true,
   "git.blame.statusBarItem.enabled": true,
@@ -39,5 +39,5 @@
   },
   "biome.suggestInstallingGlobally": false,
   "json.schemaDownload.enable": true,
-  "claude-code.selectedModel": "default"
+  "window.zoomLevel": 0.5
 }
