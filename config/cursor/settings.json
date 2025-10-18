@@ -12,7 +12,7 @@
   "terminal.integrated.fontSize": 14,
   "workbench.activityBar.orientation": "vertical",
   "workbench.iconTheme": "bearded-icons",
-  "workbench.colorTheme": "Bearded Theme Arc",
+  "workbench.colorTheme": "Bearded Theme HC Ebony",
   "prettier.printWidth": 100,
   "git.blame.editorDecoration.enabled": true,
   "git.blame.statusBarItem.enabled": true,
