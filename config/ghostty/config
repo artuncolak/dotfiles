@@ -3,7 +3,7 @@ font-family = Maple Mono NF
 font-size = 14
 
 # Theme and Appearance
-theme = Argonaut
+theme = Gruvbox Dark Hard
 
 # Window Settings
 window-width = 110
@@ -15,4 +15,5 @@ macos-titlebar-proxy-icon = hidden
 # Quick Terminal
 keybind = global:ctrl+cmd+t=toggle_quick_terminal
 quick-terminal-position = top
-quick-terminal-size = 50%,75%
+quick-terminal-size = 75%,75%
+quick-terminal-autohide = true
