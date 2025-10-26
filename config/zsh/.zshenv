@@ -15,6 +15,7 @@ export ZDOTDIR="${XDG_CONFIG_HOME}/zsh"
 export STARSHIP_CONFIG="${XDG_CONFIG_HOME}/starship/starship.toml"
 export OH_MY_ZSH_DIR="$XDG_CONFIG_HOME/omz"
 export COLIMA_HOME=${XDG_CONFIG_HOME}/colima/.colima
+export TMUX_DIR=${XDG_CONFIG_HOME}/tmux
 
 # Set default applications
 export EDITOR="cursor"

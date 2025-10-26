@@ -10,6 +10,9 @@ alias lg='lazygit'
 alias lzd='lazydocker'
 alias vi='nvim'
 alias vim='nvim'
+alias tm='tmux'
+alias tms=${TMUX_DIR}/scripts/tmux-sessionizer.sh
+alias tmx=${TMUX_DIR}/scripts/tmux-session-switcher.sh
 
 # Enhanced ls commands with eza
 alias ls='eza --icons=always'

@@ -1,9 +1,9 @@
 # Font Settings
 font-family = Maple Mono NF
-font-size = 14
+font-size = 16
 
 # Theme and Appearance
-theme = Gruvbox Dark Hard
+theme = Catppuccin Mocha
 
 # Window Settings
 window-width = 110
@@ -17,3 +17,5 @@ keybind = global:ctrl+cmd+t=toggle_quick_terminal
 quick-terminal-position = top
 quick-terminal-size = 75%,75%
 quick-terminal-autohide = true
+
+macos-option-as-alt = true

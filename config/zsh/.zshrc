@@ -30,3 +30,8 @@ source $ZDOTDIR/git.zsh
 eval "$(fnm env --use-on-cd --shell zsh)"
 
 bindkey '^o' fzf-cd-widget
+
+if [ -z "$TMUX" ]
+then
+    tmux attach -t main || tmux new -s main
+fi
