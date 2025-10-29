@@ -18,13 +18,19 @@ while true; do
     fi
 
     # Get list of sessions and mark current one with green color
-    sessions=$(tmux list-sessions -F "#{session_name}" | while read -r session; do
-        if [ "$session" = "$current_session" ]; then
-            echo -e "\033[32m$session (current)\033[0m"
-        else
-            echo "$session"
+    # Current session is listed first, then others in alphabetical order
+    sessions=$(
+        # First, print current session if it exists
+        if [ -n "$current_session" ]; then
+            echo -e "\033[32m$current_session (current)\033[0m"
         fi
-    done)
+        # Then print all other sessions
+        tmux list-sessions -F "#{session_name}" | while read -r session; do
+            if [ "$session" != "$current_session" ]; then
+                echo "$session"
+            fi
+        done
+    )
 
     # If no sessions exist
     if [ -z "$sessions" ]; then
@@ -35,7 +41,7 @@ while true; do
     # Use fzf to select a session
     selected_session=$(echo "$sessions" | fzf \
         --prompt="Select tmux session: " \
-        --height=50% \
+        --height=100% \
         --reverse \
         --border \
         --ansi \
