@@ -19,7 +19,19 @@
   "autosave": "on_focus_change",
   "theme": {
     "mode": "system",
-    "light": "Ayu Light",
+    "light": "Zedokai Light (Filter Sun)",
     "dark": "Zedokai Darker (Filter Ristretto)"
+  },
+  "auto_install_extensions": {
+    "bearded": true,
+    "bearded-icon-theme": true,
+    "dockerfile": true,
+    "git-firefly": true,
+    "html": true,
+    "latex": true,
+    "make": true,
+    "mcp-server-context7": true,
+    "toml": true,
+    "zedokai": true
   }
 }

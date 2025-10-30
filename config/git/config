@@ -1,3 +1,13 @@
+[user]
+	name = Artun Colak
+	email = artuncolak97@gmail.com
+
+[includeIf "gitdir:~/Projects/work"]
+    path = ~/.config/git/config-work
+
+[include]
+    path = ~/.config/git/config-personal
+
 [core]
     pager = delta
 
@@ -14,7 +24,7 @@
 
 [init]
 	defaultBranch = main
-    
+
 [push]
 	autoSetupRemote = true
 

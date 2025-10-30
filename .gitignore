@@ -1,9 +1,3 @@
 .DS_Store
-.zcompdump*
-.zsh_history
-git-author.zsh
-.zsh_sessions
-.zprofile
 *.bak
-local.zsh
 .env

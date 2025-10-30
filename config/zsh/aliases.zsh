@@ -1,15 +1,17 @@
-export DOTFILES_DIR="$HOME/.dotfiles"
-
-# Aliases
+# ZSH
+alias zsh-update='source ${ZDOTDIR}/.zshrc && echo "✅ Zsh settings reloaded!"'
 
 # Project aliases
-alias p='cd ~/projects'
+alias p=cd ${PROJECTS_DIR}
+alias pw=cd ${PROJECTS_DIR}/work
 
 # Development tools
 alias lg='lazygit'
 alias lzd='lazydocker'
 alias vi='nvim'
 alias vim='nvim'
+
+# Tmux
 alias tm='tmux'
 alias tms=${TMUX_DIR}/scripts/tmux-sessionizer.sh
 alias tmx=${TMUX_DIR}/scripts/tmux-session-switcher.sh

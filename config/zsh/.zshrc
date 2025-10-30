@@ -25,7 +25,6 @@ fi
 source <(fzf --zsh)
 source $ZDOTDIR/aliases.zsh
 source $ZDOTDIR/history.zsh
-source $ZDOTDIR/git.zsh
 
 eval "$(fnm env --use-on-cd --shell zsh)"
 

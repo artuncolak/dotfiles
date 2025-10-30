@@ -17,6 +17,10 @@ export OH_MY_ZSH_DIR="$XDG_CONFIG_HOME/omz"
 export COLIMA_HOME=${XDG_CONFIG_HOME}/colima/.colima
 export TMUX_DIR=${XDG_CONFIG_HOME}/tmux
 
+# Set personal  directories
+export DOTFILES_DIR="${HOME}/.dotfiles"
+export PROJECTS_DIR="${HOME}/Projects"
+
 # Set default applications
 export EDITOR="cursor"
 
