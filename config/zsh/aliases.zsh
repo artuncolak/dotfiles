@@ -25,6 +25,9 @@ alias ldot='eza --icons=always -ld .*'
 # Better cat with syntax highlighting
 alias cat='bat --color=always --style=plain'
 
+# Convert files to UTF-8
+alias convert-utf8='${DOTFILES_DIR}/config/zsh/convert-to-utf8.sh'
+
 # Dotfiles
 dotfiles() {
     if [[ $# -eq 0 ]]; then
