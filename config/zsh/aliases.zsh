@@ -2,8 +2,8 @@
 alias zsh-update='source ${ZDOTDIR}/.zshrc && echo "✅ Zsh settings reloaded!"'
 
 # Project aliases
-alias p=cd ${PROJECTS_DIR}
-alias pw=cd ${PROJECTS_DIR}/work
+alias p='cd ${PROJECTS_DIR}'
+alias pw='cd ${PROJECTS_DIR}/work'
 
 # Development tools
 alias lg='lazygit'
@@ -26,7 +26,10 @@ alias ldot='eza --icons=always -ld .*'
 alias cat='bat --color=always --style=plain'
 
 # Convert files to UTF-8
-alias convert-utf8='${DOTFILES_DIR}/config/zsh/convert-to-utf8.sh'
+alias convert-utf8='${ZDOTDIR}/scripts/convert-to-utf8.sh'
+
+# Clean node_modules
+alias nuke-nm='${ZDOTDIR}/scripts/clean-node-modules.sh'
 
 # Dotfiles
 dotfiles() {
@@ -36,40 +39,3 @@ dotfiles() {
         make -C $DOTFILES_DIR "$@"
     fi
 }
-
-# Clean node_modules
-clean_node_modules() {
-    local path="$1"
-
-    if [[ -z "$path" ]]; then
-        echo "Usage: clean_node_modules /path/to/search"
-        return 1
-    fi
-
-    echo "Scanning: $path"
-
-    # Find all node_modules directories
-    local dirs
-    dirs=$(/usr/bin/find "$path" -type d -name "node_modules" 2>/dev/null)
-
-    if [[ -z "$dirs" ]]; then
-        echo "No node_modules directories found."
-        return 0
-    fi
-
-    local count=$(echo "$dirs" | /usr/bin/wc -l)
-    echo "Found $count node_modules directories."
-    echo
-    echo "Total size:"
-    echo "$dirs" | /usr/bin/xargs /usr/bin/du -ch | /usr/bin/grep total
-
-    echo
-    read "?Do you want to delete them? (y/Y/yes/YES): " confirm
-    if [[ "$confirm" =~ ^[Yy](es)?$ ]]; then
-        echo "$dirs" | /usr/bin/xargs /bin/rm -rf
-        echo "node_modules directories deleted."
-    else
-        echo "Operation cancelled."
-    fi
-}
-alias nuke-nm='clean_node_modules'

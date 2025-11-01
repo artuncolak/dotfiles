@@ -45,3 +45,10 @@ else
     echo "Updating tmux plugin manager..."
     git -C "$TMUX_TPM_DIR" pull
 fi
+
+# Make zsh scripts executable
+ZSH_SCRIPTS_DIR="$HOME/.dotfiles/config/zsh/scripts"
+if [ -d "$ZSH_SCRIPTS_DIR" ]; then
+    echo "Setting execute permissions for zsh scripts..."
+    chmod +x "$ZSH_SCRIPTS_DIR"/*.sh
+fi
