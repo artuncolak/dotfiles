@@ -30,7 +30,12 @@ eval "$(fnm env --use-on-cd --shell zsh)"
 
 bindkey '^o' fzf-cd-widget
 
-if [ -z "$TMUX" ]
-then
-    tmux attach -t main || tmux new -s main
+# Force load rust env
+if [ -f "$HOME/.cargo/env" ]; then
+  . "$HOME/.cargo/env"
 fi
+
+# bun
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

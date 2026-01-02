@@ -18,4 +18,4 @@
     - type: weather
       units: metric
       hour-format: 12h
-      location: Edirne, Türkiye
+      location: Norwich, UK

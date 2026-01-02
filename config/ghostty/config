@@ -1,9 +1,10 @@
 # Font Settings
-font-family = Maple Mono NF
-font-size = 16
+font-family = Monaspace Neon
+font-family = MesloLGL Nerd Font Mono
+font-size = 14
 
 # Theme and Appearance
-theme = Catppuccin Mocha
+theme = Ayu
 
 # Window Settings
 window-width = 110
@@ -15,7 +16,8 @@ macos-titlebar-proxy-icon = hidden
 # Quick Terminal
 keybind = global:ctrl+cmd+t=toggle_quick_terminal
 quick-terminal-position = top
-quick-terminal-size = 75%,75%
+quick-terminal-size = 75%,100%
 quick-terminal-autohide = true
 
 macos-option-as-alt = true
+keybind = shift+enter=text:\x1b\r

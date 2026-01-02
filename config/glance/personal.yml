@@ -123,4 +123,11 @@
                   icon: https://www.google.com/s2/favicons?domain=https://algomaster.io/&sz=256
                   same-tab: true
 
+            - title: Apps
+              links:
+                - title: Actual Budget
+                  url: https://actual.colak.io
+                  icon: di:actual-budget
+                  same-tab: true
+
         - $include: newsletter.yml

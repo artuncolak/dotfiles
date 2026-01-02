@@ -6,4 +6,4 @@ services:
     volumes:
       - ~/.config/glance:/app/config
     ports:
-      - "${GLANCE_PORT}:8080"
+      - "${GLANCE_PORT:-80}:8080"

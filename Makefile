@@ -37,7 +37,8 @@ macos:
 
 docker:
 	@echo "Starting docker services..."
-	@docker compose up -d
+	@chmod +x scripts/docker.sh
+	@./scripts/docker.sh
 
 zsh:
 	@echo "Running zsh script..."

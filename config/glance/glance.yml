@@ -1,4 +1,3 @@
 cache: 6h
 pages:
   - $include: personal.yml
-  - $include: work.yml
