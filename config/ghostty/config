@@ -15,7 +15,7 @@ macos-titlebar-proxy-icon = hidden
 # Quick Terminal
 keybind = global:ctrl+cmd+t=toggle_quick_terminal
 quick-terminal-position = top
-quick-terminal-size = 75%,75%
+quick-terminal-size = 75%,100%
 quick-terminal-autohide = true
 
 macos-option-as-alt = true

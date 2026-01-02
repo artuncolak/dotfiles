@@ -1,5 +1,13 @@
 #!/bin/bash
 
+# Check for Battery and install if we don't have it
+if test ! $(which battery); then
+    echo "Installing Battery..."
+    NONINTERACTIVE=1 /bin/bash -c "$(curl -s https://raw.githubusercontent.com/actuallymentor/battery/main/setup.sh)"
+else
+    echo "Battery already installed."
+fi
+
 # Check for Homebrew and install if we don't have it
 if test ! $(which brew); then
     echo "Installing Homebrew..."

@@ -11,19 +11,21 @@
       command: source ./config/zsh/.zshenv
 
 - link:
-    ~/.zshenv: { path: config/zsh/.zshenv, force: true }
-    ${XDG_CONFIG_HOME}/zsh: config/zsh
-    ${XDG_CONFIG_HOME}/lazygit: config/lazygit
-    ${XDG_CONFIG_HOME}/starship: config/starship
-    ${XDG_CONFIG_HOME}/ghostty: config/ghostty
-    ${XDG_CONFIG_HOME}/zed: config/zed
-    ${XDG_CONFIG_HOME}/glance: config/glance
-    ${XDG_CONFIG_HOME}/tmux: config/tmux
     ${XDG_CONFIG_HOME}/colima/default/colima.yaml: config/colima/colima.yaml
     ${XDG_CONFIG_HOME}/git: config/git
-    ~/Library/Application Support/Cursor/User/settings.json: config/cursor/settings.json
-    ~/Library/Application Support/Cursor/User/keybindings.json: config/cursor/keybindings.json
+    ${XDG_CONFIG_HOME}/glance: config/glance
+    ${XDG_CONFIG_HOME}/ghostty: config/ghostty
+    ${XDG_CONFIG_HOME}/lazygit: config/lazygit
+    ${XDG_CONFIG_HOME}/opencode/opencode.json: config/opencode/opencode.json
+    ${XDG_CONFIG_HOME}/starship: config/starship
+    ${XDG_CONFIG_HOME}/tmux: config/tmux
+    ${XDG_CONFIG_HOME}/zed: config/zed
+    ${XDG_CONFIG_HOME}/zsh: config/zsh
     ~/.cursor/mcp.json: config/cursor/mcp.json
+    ~/.docker/config.json: config/docker/config.json
+    ~/.zshenv: { path: config/zsh/.zshenv, force: true }
+    ~/Library/Application Support/Cursor/User/keybindings.json: config/cursor/keybindings.json
+    ~/Library/Application Support/Cursor/User/settings.json: config/cursor/settings.json
 
 - create:
     - ~/Projects

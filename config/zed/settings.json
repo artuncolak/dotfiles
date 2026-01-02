@@ -2,11 +2,11 @@
   "show_edit_predictions": true,
   "telemetry": {
     "diagnostics": false,
-    "metrics": false
+    "metrics": false,
   },
   "agent": {
     "always_allow_tool_actions": true,
-    "single_file_review": true
+    "single_file_review": true,
   },
   "icon_theme": "Bearded Icon Theme",
   "base_keymap": "Cursor",
@@ -14,13 +14,13 @@
   "buffer_font_size": 16.0,
   "buffer_font_family": "Monaspace Argon",
   "terminal": {
-    "font_family": "Maple Mono NF"
+    "font_family": "Monaspace Argon",
   },
   "autosave": "on_focus_change",
   "theme": {
     "mode": "system",
     "light": "Zedokai Light (Filter Sun)",
-    "dark": "Zedokai Darker (Filter Ristretto)"
+    "dark": "Zedokai Darker (Filter Ristretto)",
   },
   "auto_install_extensions": {
     "bearded": true,
@@ -32,6 +32,6 @@
     "make": true,
     "mcp-server-context7": true,
     "toml": true,
-    "zedokai": true
-  }
+    "zedokai": true,
+  },
 }

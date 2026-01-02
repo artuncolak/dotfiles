@@ -19,10 +19,13 @@ export TMUX_DIR=${XDG_CONFIG_HOME}/tmux
 
 # Set personal  directories
 export DOTFILES_DIR="${HOME}/.dotfiles"
-export PROJECTS_DIR="${HOME}/Projects"
+export PROJECTS_DIR="${HOME}/projects"
 
 # Set default applications
 export EDITOR="cursor"
 
 # Homebrew
 export HOMEBREW_CASK_OPTS="--fontdir=/Library/Fonts"
+
+# opencode
+export PATH=/Users/artuncolak/.opencode/bin:$PATH
